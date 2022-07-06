@@ -1,0 +1,52 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet author="admin" id="4">
+        <!--
+            process entidade.
+        -->
+        <createTable tableName="process">
+            <column autoIncrement="true" name="id" type="serial4">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="number" type="VARCHAR(255)" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)" >
+                <constraints nullable="false"/>
+            </column>
+            <column name="defendant_id" type="int4" >
+                <constraints nullable="true"/>
+            </column>
+        </createTable>
+
+        <!--
+            reu entidade.
+        -->
+        <createTable tableName="defendant">
+            <column autoIncrement="true" name="id" type="serial4">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)" >
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <!--
+            Constraints entidade reu
+        -->
+        <addForeignKeyConstraint baseColumnNames="defendant_id"
+                                 baseTableName="process"
+                                 constraintName="fk_defendant_process_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="defendant"/>
+        <rollback>
+            <dropTable tableName="process"/>
+            <dropTable tableName="defendant"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>

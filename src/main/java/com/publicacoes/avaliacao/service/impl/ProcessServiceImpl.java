@@ -8,7 +8,6 @@ import com.publicacoes.avaliacao.exception.CustomHandlerException;
 import com.publicacoes.avaliacao.repository.DefendantRepository;
 import com.publicacoes.avaliacao.repository.ProcessRepository;
 import com.publicacoes.avaliacao.service.ProcessService;
-import liquibase.pro.packaged.P;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +32,6 @@ public class ProcessServiceImpl implements ProcessService {
         processRepository.save(process);
 
     }
-
     @Override
     public Process addDefendantToAProcess(SaveProcessDTO saveProcessDTO) throws CustomHandlerException {
         Optional<Defendant> defendantType = defendantRepository.findById(saveProcessDTO.getDefendantId());

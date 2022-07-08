@@ -1,14 +1,11 @@
 package com.publicacoes.avaliacao.service.impl;
 
-import com.publicacoes.avaliacao.dto.ListProcessDTO;
-import com.publicacoes.avaliacao.dto.SaveProcessDTO;
 import com.publicacoes.avaliacao.entity.Defendant;
-import com.publicacoes.avaliacao.entity.Process;
+
 import com.publicacoes.avaliacao.exception.CustomHandlerException;
 import com.publicacoes.avaliacao.repository.DefendantRepository;
-import com.publicacoes.avaliacao.repository.ProcessRepository;
+
 import com.publicacoes.avaliacao.service.DefendantService;
-import com.publicacoes.avaliacao.service.ProcessService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 

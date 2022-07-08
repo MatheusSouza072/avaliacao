@@ -32,7 +32,7 @@ public class ProcessController {
     }
 
     @PostMapping
-    @ApiOperation("Criar um processo")
+    @ApiOperation("Criar um processo, certifique-se de que um réu tenha sido criado.")
     public ResponseEntity createProcess(@RequestBody Process process) throws CustomHandlerException {
         processService.createProcess(process);
         return ResponseEntity.ok("Sucess");

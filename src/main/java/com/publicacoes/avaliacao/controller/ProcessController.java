@@ -7,7 +7,6 @@ import com.publicacoes.avaliacao.exception.CustomHandlerException;
 import com.publicacoes.avaliacao.service.ProcessService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

@@ -7,15 +7,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.Optional;
 
 @Repository
 public interface ProcessRepository extends JpaRepository<Process, Integer> {
     @Query(value = "select * from public.process p \n" +
             "where p.number = :number\n", nativeQuery = true)
     Process findByNumberProcess(String number);
-
-
+    
     @Query(value = "select p.id as getId, p.number as NumberProcess, p.name as NameProcess from process p", nativeQuery = true)
     List<ListProcessDTO> returnAllProcess();
 

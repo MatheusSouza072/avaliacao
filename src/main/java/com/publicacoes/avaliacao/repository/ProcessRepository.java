@@ -16,7 +16,7 @@ public interface ProcessRepository extends JpaRepository<Process, Integer> {
     Process findByNumberProcess(String number);
 
 
-    @Query(value = "select p.number as NumberProcess, p.name as NameProcess from process p", nativeQuery = true)
+    @Query(value = "select p.id as getId, p.number as NumberProcess, p.name as NameProcess from process p", nativeQuery = true)
     List<ListProcessDTO> returnAllProcess();
 
 }

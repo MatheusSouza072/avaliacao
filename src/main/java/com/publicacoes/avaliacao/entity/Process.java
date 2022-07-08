@@ -1,20 +1,16 @@
 package com.publicacoes.avaliacao.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
+@Builder
 @NoArgsConstructor
 @Entity
 @Table(name = "process", schema = "public")
-@SuperBuilder
-@ToString
 public class Process {
 
     @Id
@@ -28,7 +24,9 @@ public class Process {
     @Column(name = "name")
     private String name;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "defendant_id")
     private Defendant defendant;
+
+
 }

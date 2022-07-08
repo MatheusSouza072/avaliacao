@@ -12,8 +12,7 @@
 
 <h4>Atenção</h4>
 No projeto, criei uma instância de banco de dados postgres no RDS da AWS, porém caso deseje rodar localmente, basta ter instalado o Docker no seu sistema operacional, e na raiz do projeto rodar "docker-compose up".
-Após isso, basta trocar a seguinte propriedade para localhost: 
-<br>Ex:
+Após isso, basta trocar a seguinte propriedade para
 <br>spring.datasource.url: spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
 
 <br>Para verificar a documentação basta acessar o seguinte link: "http://localhost:8091/swagger-ui/index.html#/"

@@ -15,7 +15,7 @@ No projeto, criei uma instância de banco de dados postgres no RDS da AWS, poré
 Após isso, basta trocar a propriedade spring.datasource.url localizada no application.properties para a seguinte:
 <br>spring.datasource.url=jdbc:postgresql://localhost:5432/postgres
 
-<br>Para verificar a documentação basta acessar o seguinte link: "http://localhost:8091/swagger-ui/index.html#/"
-<br>No application.properties a porta está definida como 8091, caso tenha que alterar, altere na propriedade "server.port".
-<br>URL base da api: http://localhost:8091/
-<br>As configurações de gerações de estrutura sql do liquibase, encontran-se em resources/db/changelog
+<br><brPara verificar a documentação basta acessar o seguinte link: "http://localhost:8091/swagger-ui/index.html#/"
+<br><brNo application.properties a porta está definida como 8091, caso tenha que alterar, altere na propriedade "server.port".
+<br><brURL base da api: http://localhost:8091/
+<br><brAs configurações de gerações de estrutura sql do liquibase, encontran-se em resources/db/changelog
